@@ -1,0 +1,26 @@
+AllCops:
+  Exclude:
+    - '**/Gemfile'
+    - '**/*.gemspec'
+    - 'pkg/**/*'
+
+Style/RegexpLiteral:
+  Exclude:
+    - '**/Guardfile'
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Lint/UnusedMethodArgument:
+  Exclude:
+    - 'lib/chef_gen/snippet/*.rb'
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/AbcSize:
+  Max: 20
