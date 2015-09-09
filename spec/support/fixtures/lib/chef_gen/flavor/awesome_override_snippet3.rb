@@ -4,6 +4,7 @@ module ChefGen
   module Flavor
     class AwesomeOverrideSnippet3 < ChefGen::Flavor::Awesome
       NAME = 'awesome_override_snippet3'
+      DESC = 'removes snippets from a parent flavor'
 
       def initialize(temp_path: nil, type: nil, recipe: nil)
         super

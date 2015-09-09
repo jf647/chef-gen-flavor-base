@@ -16,6 +16,7 @@ module ChefGen
       # @return [void]
       # @api private
       def initialize_generate
+        super
         @flavor.class.do_declare_resources do
           c = ChefDK::Generator.context
           if c.have_git && !c.skip_git_init

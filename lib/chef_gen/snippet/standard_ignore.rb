@@ -21,6 +21,7 @@ module ChefGen
       # @return [void]
       # @api private
       def initialize_generate
+        super
         add_accessors
         declare_chefignore
         declare_gitignore

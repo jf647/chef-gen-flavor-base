@@ -18,6 +18,7 @@ module ChefGen
       # @return [void]
       # @api private
       def initialize_generate
+        super
         @flavor.class.send(:attr_accessor, :actions_taken)
         @flavor.actions_taken = []
 

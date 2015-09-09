@@ -13,6 +13,7 @@ module ChefGen
       # @return [void]
       # @api private
       def initialize_generate
+        super
         @flavor.class.do_declare_resources do
           cookbook_gems['pry'] = '~> 0.10'
           cookbook_gems['pry-byebug'] = '~> 3.1'

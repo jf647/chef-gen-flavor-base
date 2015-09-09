@@ -4,6 +4,7 @@ module ChefGen
   module Flavor
     class AwesomeOverride2 < ChefGen::Flavor::Awesome
       NAME = 'awesome_override2'
+      DESC = 'overrides resources in the flavor'
 
       # locks rubocop to v0.31, uses after hook to ensure we override
       # what the style_rubocop snippet sets as default

@@ -5,6 +5,7 @@ module ChefGen
   module Flavor
     class Awesome < ChefGen::FlavorBase
       NAME = 'awesome'
+      DESC = 'an awesome cookbook template'
 
       def initialize(temp_path: nil, type: nil, recipe: nil)
         super

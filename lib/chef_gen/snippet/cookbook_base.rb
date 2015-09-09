@@ -29,6 +29,7 @@ module ChefGen
       # @return [void]
       # @api private
       def initialize_setup
+        super
         snippet_content_path = File.expand_path(File.join(static_content_path(__FILE__))) + '/.'
         @flavor.class.do_add_content do
           tocopy << [snippet_content_path]
@@ -39,6 +40,7 @@ module ChefGen
       # @return [void]
       # @api private
       def initialize_generate
+        super
         add_accessors
         @flavor.class.do_declare_resources do
           templates_if_missing << 'metadata.rb'

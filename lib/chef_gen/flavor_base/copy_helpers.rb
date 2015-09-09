@@ -23,6 +23,7 @@ module ChefGen
           FileUtils.mkpath(dstdir) unless File.exist?(dstdir)
           FileUtils.cp_r(src, dst)
         end
+
         # clear out the list of things to copy so that snippets can
         # re-load it and call copy_content again if needed
         @tocopy = []

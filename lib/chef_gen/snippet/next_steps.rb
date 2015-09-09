@@ -21,6 +21,7 @@ module ChefGen
       # @return [void]
       # @api private
       def initialize_generate
+        super
         @flavor.class.send(:attr_accessor, :next_steps)
         hook_display_next_steps
       end

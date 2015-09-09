@@ -13,6 +13,7 @@ module ChefGen
       # @return [void]
       # @api private
       def initialize_setup
+        super
         snippet_content_path = File.expand_path(File.join(static_content_path(__FILE__))) + '/.'
         @flavor.class.do_add_content do
           tocopy << [snippet_content_path]
@@ -22,6 +23,7 @@ module ChefGen
       # initializes the snippet in generate mode
       # @return [void]
       def initialize_generate
+        super
         declare_directories
         declare_files_templates
         declare_chefignore_patterns

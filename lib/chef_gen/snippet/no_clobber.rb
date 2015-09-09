@@ -17,6 +17,7 @@ module ChefGen
       # @return [void]
       # @api private
       def initialize_generate
+        super
         @flavor.class.send(:attr_accessor, :fail_on_clobber)
 
         # default is false if '-a clobber' was passed, true otherwise

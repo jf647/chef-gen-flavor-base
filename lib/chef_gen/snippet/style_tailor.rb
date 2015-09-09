@@ -13,6 +13,7 @@ module ChefGen
       # @return [void]
       # @api private
       def initialize_generate
+        super
         declare_cookbook_gems
         declare_rake_tasks
       end

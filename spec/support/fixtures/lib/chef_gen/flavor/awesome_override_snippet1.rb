@@ -6,6 +6,7 @@ module ChefGen
   module Flavor
     class AwesomeOverrideSnippet1 < ChefGen::Flavor::Awesome
       NAME = 'awesome_override_snippet1'
+      DESC = 'adds a snippet that overrides content'
 
       def initialize(temp_path: nil, type: nil, recipe: nil)
         super
