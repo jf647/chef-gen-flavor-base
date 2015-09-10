@@ -31,12 +31,13 @@ module ChefGen
 
       # returns the path to static content distributed with a flavor
       # @param file [String] the file to generate the path from
+      # @param flavor [String] the name of the flavor
       # @return [String] the path the static content relative to the file
       # @api private
-      def static_content_path(file)
+      def static_content_path(file, flavor)
         File.expand_path(
           File.join(
-            File.dirname(file), '..', '..', '..', 'shared', 'flavor', self.class::NAME
+            File.dirname(file), '..', '..', '..', 'shared', 'flavor', flavor
           )
         )
       end

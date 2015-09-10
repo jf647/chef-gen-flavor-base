@@ -12,7 +12,7 @@ module ChefGen
     include ChefGen::FlavorBase::ResourceHelpers
 
     # the version of the gem
-    VERSION = '0.9.0'
+    VERSION = '0.9.1'
 
     # define common hooks
     define_hooks :before_initialize, :after_initialize,

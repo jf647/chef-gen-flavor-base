@@ -12,7 +12,7 @@ module ChefGen
       end
 
       def add_content
-        @tocopy << [File.expand_path(File.join(static_content_path(__FILE__))) + '/.']
+        @tocopy << [File.expand_path(File.join(static_content_path(__FILE__, 'awesome'))) + '/.']
         super
       end
     end
