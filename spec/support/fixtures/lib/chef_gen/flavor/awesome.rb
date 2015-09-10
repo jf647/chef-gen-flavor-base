@@ -6,6 +6,7 @@ module ChefGen
     class Awesome < ChefGen::FlavorBase
       NAME = 'awesome'
       DESC = 'an awesome cookbook template'
+      VERSION = '0.0.0'
 
       def initialize(temp_path: nil, type: nil, recipe: nil)
         super
@@ -30,7 +31,7 @@ module ChefGen
       end
 
       do_add_content do
-        @tocopy << [File.expand_path(File.join(static_content_path(__FILE__))) + '/.']
+        @tocopy << [File.expand_path(File.join(static_content_path(__FILE__, 'awesome'))) + '/.']
       end
     end
   end

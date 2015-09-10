@@ -157,7 +157,7 @@ directory that chef-gen-flavors will pass to ChefDK:
 
 ```ruby
 do_add_content do
-  @tocopy << [File.expand_path(File.join(static_content_path(__FILE__))) + '/.']
+  @tocopy << [File.expand_path(File.join(static_content_path(__FILE__, 'flavor_name'))) + '/.']
 end
 ```
 
@@ -264,7 +264,7 @@ module ChefGen
       NAME = 'awesome_override1'
 
       before_copy_content do
-        @tocopy << [File.expand_path(File.join(static_content_path(__FILE__))) + '/.']
+        @tocopy << [File.expand_path(File.join(static_content_path(__FILE__, 'awesome_override1'))) + '/.']
       end
     end
   end
@@ -284,7 +284,7 @@ module ChefGen
 
       def initialize_generate
         @flavor.class.before_copy_content do
-          @tocopy << [File.expand_path(File.join(static_content_path(__FILE__))) + '/.']
+          @tocopy << [File.expand_path(File.join(static_content_path(__FILE__, 'before_copy_content'))) + '/.']
         end
       end
     end
@@ -450,7 +450,7 @@ using the name.
 
 ```ruby
 def initialize_setup
-  snippet_content_path = File.expand_path(File.join(static_content_path(__FILE__))) + '/.'
+  snippet_content_path = File.expand_path(File.join(static_content_path(__FILE__, 'snippet_name'))) + '/.'
   @flavor.class.do_add_content do
     tocopy << [snippet_content_path]
   end
@@ -699,7 +699,7 @@ module ChefGen
       NAME = 'almost_perfect'
 
       before_copy_content do
-        @tocopy << [File.expand_path(File.join(static_content_path(__FILE__))) + '/.']
+        @tocopy << [File.expand_path(File.join(static_content_path(__FILE__, 'almost_perfect'))) + '/.']
       end
     end
   end

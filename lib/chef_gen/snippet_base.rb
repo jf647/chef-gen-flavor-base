@@ -33,12 +33,13 @@ module ChefGen
 
     # returns the path to static content distributed with a snippet
     # @param file [String] the file to generate the path from
+    # @param snippet [String] the name of the snippet
     # @return [String] the path the static content relative to the file
     # @api private
-    def static_content_path(file)
+    def static_content_path(file, snippet)
       File.expand_path(
         File.join(
-          File.dirname(file), '..', '..', '..', 'shared', 'snippet', self.class::NAME
+          File.dirname(file), '..', '..', '..', 'shared', 'snippet', snippet
         )
       )
     end
