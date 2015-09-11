@@ -1,14 +1,14 @@
 # -*- encoding: utf-8 -*-
-# stub: chef-gen-flavor-base 0.9.1.20150910100832 ruby lib
+# stub: chef-gen-flavor-base 0.9.2.20150911125045 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "chef-gen-flavor-base"
-  s.version = "0.9.1.20150910100832"
+  s.version = "0.9.2.20150911125045"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["James FitzGibbon"]
-  s.date = "2015-09-10"
+  s.date = "2015-09-11"
   s.description = "chef-gen-flavor-base is a base class to make it easy to create 'flavors'\nfor use with\n[chef-gen-flavors](https://github.com/jf647/chef-gen-flavors).\n\nchef-gen-flavors plugs into the 'chef generate' command provided by\nChefDK to let you provide an alternate template for cookbooks and other\nchef components.\n\nThis gem simply provides a class your flavor can derive from; templates\nare provided by separate gems, which you can host privately for use\nwithin your organization or publicly for the Chef community to use.\n\nAn example flavor that demonstrates how to use this gem is distributed\nseparately:\n[chef-gen-flavor-example](https://github.com/jf647/chef-gen-flavor-example)\n\nAt present this is focused primarily on providing templates for\ngeneration of cookbooks, as this is where most organization-specific\ncustomization takes place. Support for the other artifacts that ChefDK\ncan generate may work, but is not the focus of early releases."
   s.email = ["james@nadt.net"]
   s.extra_rdoc_files = ["History.md", "Manifest.txt", "README.md"]

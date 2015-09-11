@@ -23,9 +23,10 @@ module ChefGen
       # @api private
       def declare_cookbook_gems
         @flavor.class.do_declare_resources do
-          break unless snippet?('cookbook_base')
-          cookbook_gems['tailor'] = '~> 1.4'
-          cookbook_gems['guard-rake'] = '~> 0.0'
+          if snippet?('cookbook_base')
+            cookbook_gems['tailor'] = '~> 1.4'
+            cookbook_gems['guard-rake'] = '~> 0.0'
+          end
         end
       end
 
@@ -34,8 +35,7 @@ module ChefGen
       # @api private
       def declare_rake_tasks
         @flavor.class.do_declare_resources do
-          break unless snippet?('cookbook_base')
-          rake_tasks['tailor'] = <<'END'
+          rake_tasks['tailor'] = <<'END' if snippet?('cookbook_base')
 require 'tailor/rake_task'
 Tailor::RakeTask.new do |t|
   {
