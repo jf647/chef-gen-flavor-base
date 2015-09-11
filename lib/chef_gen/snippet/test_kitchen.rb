@@ -109,8 +109,8 @@ module ChefGen
       # @api private
       def declare_rake_tasks
         @flavor.class.do_declare_resources do
-          break unless snippet?('cookbook_base')
-          rake_tasks['testkitchen'] = <<'END'
+          if snippet?('cookbook_base')
+            rake_tasks['testkitchen'] = <<'END'
 begin
   require 'kitchen/rake_tasks'
   Kitchen::RakeTasks.new
@@ -122,6 +122,7 @@ rescue
 end
 task integration: 'kitchen:all'
 END
+          end
         end
       end
     end

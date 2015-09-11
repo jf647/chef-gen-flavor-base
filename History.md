@@ -1,5 +1,9 @@
 # Changelog for chef-gen-flavor-base
 
+## 0.9.2
+
+* fix a couple of snippet guards that were referring to the wrong dependent
+
 ## 0.9.1
 
 * update #static_content_path to take a flavor or snippet name arg rather than relying on the NAME constant in the class, because this fails when you have C < B < FlavorBase (B would try to copy files from a directory named for C)

@@ -100,7 +100,7 @@ END
       # @api private
       def declare_guard_sets
         @flavor.class.do_declare_resources do
-          if snippet?('cookbook_base')
+          if snippet?('guard')
             guard_sets['chefspec'] = <<'END'
 rspec_command = ENV.key?('DISABLE_PRY_RESCUE') ? 'rspec' : 'rescue rspec'
 guard :rspec, all_on_start: true, cmd: "bundle exec #{rspec_command}" do
